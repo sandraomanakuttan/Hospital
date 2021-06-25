@@ -1,0 +1,6 @@
+Django==3.0.3
+django-phonenumber-field==4.0.0
+phonenumbers==8.11.4
+Pillow==7.0.0
+django-mathfilters==1.0.0
+django-widget-tweaks

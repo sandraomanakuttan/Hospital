@@ -1,0 +1,1248 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>Login &#8211; Hospital Management</title>
+<link rel='dns-prefetch' href='//cdn.canyonthemes.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Hospital Management &raquo; Feed" href="{% static 'feed/' %}" />
+<link rel="alternate" type="application/rss+xml" title="Hospital Management &raquo; Comments Feed" href="{% static 'comments/feed/' %}" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/hospitalmanagement\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.1"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href="{% static 'wp-includes/css/dashicons.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href="{% static 'wp-includes/css/admin-bar.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href="{% static 'wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-common-css'  href="{% static 'wp-content/plugins/elementor/assets/css/common.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href="{% static 'wp-includes/css/dist/block-library/style.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='betterdocs-css'  href="{% static 'wp-content/plugins/betterdocs/public/css/betterdocs-public.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='simplebar-css'  href="{% static 'wp-content/plugins/betterdocs/public/css/simplebar.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href="{% static 'wp-content/plugins/contact-form-7/includes/css/styles.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='wpforms-full-css'  href="{% static 'wp-content/plugins/wpforms-lite/assets/css/wpforms-full.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='ea-admin-bar-css'  href="{% static 'wp-content/plugins/essential-addons-for-elementor-lite/assets/admin/css/admin-bar.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='eael-cache-view-css'  href="{% static 'wp-content/uploads/essential-addons-elementor/883344a22aa5434e.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='wpforms-admin-bar-css'  href="{% static 'wp-content/plugins/wpforms-lite/assets/css/admin-bar.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href="{% static 'wp-content/themes/better-health/assets/css/bootstrap.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-dropdownhover-css'  href="{% static 'wp-content/themes/better-health/assets/css/bootstrap-dropdownhover.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href="{% static 'wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='better-health-googleapis-css'  href='https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800|Roboto:300,400' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css'  href="{% static 'wp-content/themes/better-health/assets/css/animate.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='owl-carousel-css'  href="{% static 'wp-content/themes/better-health/assets/css/owl.carousel.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href="{% static 'wp-content/themes/better-health/assets/css/magnific-popup.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='better-health-style-css'  href="{% static 'wp-content/themes/better-health/style.css' %}" type='text/css' media='all' />
+<style id='better-health-style-inline-css' type='text/css'>
+#section1 .col-md-3.col-sm-6:nth-child(odd),#section1 .col-md-4.col-sm-6:nth-child(odd),#section1 .col-md-6.col-sm-6:nth-child(odd),#section1 .col-md-12.col-sm-6:nth-child(odd)
+    {
+         background-color: #00aef0;
+    }
+    #section1 .col-md-3.col-sm-6:nth-child(even),#section1  col-md-4.col-sm-6:nth-child(even),#section1 .col-md-6.col-sm-6:nth-child(even),#section1 .col-md-12.col-sm-6:nth-child(even)
+      {
+         background-color: #05a1dc;
+      }
+    .top-header{
+         background-color: #00AEF0;}
+    .footer-top{
+         background-color: #1A1E21;}
+    .footer-bottom{
+         background-color: #111315;}
+    .section-0-background,
+     .btn-primary,
+     .section-14-box .date,
+     #quote-carousel a.carousel-control,
+     .section-10-background,
+     .footer-top .submit-bgcolor,
+     .nav-links .nav-previous a, 
+     .nav-links .nav-next a,
+     .comments-area .submit,
+     .inner-title,
+     header .navbar-menu .navbar-nav>li>a:hover, 
+      header .navbar-menu .navbar-nav>li.active >a:active,
+      header .dropdown-menu > li > a:hover,
+      header .dropdown-menu > .active > a, 
+      header .dropdown-menu > .active > a:focus, 
+      header .dropdown-menu > .active > a:hover,
+      .section16 form input[type='submit'],
+      .woocommerce a.button, 
+      .woocommerce #respond input#submit.alt, 
+      .woocommerce a.button.alt, 
+      .woocommerce button.button.alt, 
+      .woocommerce input.button.alt,
+      .woocommerce nav.woocommerce-pagination ul li a:focus, 
+      .woocommerce nav.woocommerce-pagination ul li a:hover, 
+      .woocommerce nav.woocommerce-pagination ul li span.current,
+      header .navbar-toggle,
+      .front-blog-date .publish-month,
+      .section-contact-full, 
+      .scrollup,
+      .section-2-box-right .readmore, 
+      a.readmore,.make-booking .makebooking,.line-middle,.line-middle:before, .line-middle:after,.portfolioFilter a.current,.portfolioFilter a.current,
+      .portfolioFilter a:hover,.section-margine .nav-links .nav-previous a:hover, .section-margine .nav-links .nav-next a:hover,.btn-primary:hover,.overlay i
+
+     {
+         background-color: #00AEF0;
+     }
+     header .navbar-menu .navbar-nav>li> a:hover, 
+                  header .navbar-menu .navbar-nav>li.active > a,
+                  .navbar-default .navbar-nav > .active > a,
+                  .navbar-default .navbar-nav > .active > a:focus,
+                  .navbar-default .navbar-nav > .active > a:hover,
+                  .widget ul li a:hover,a:hover, a:focus, a:active,
+                  .section-14-box h3 a:hover,
+                  .nav-links .nav-previous a:hover, 
+                  .nav-links .nav-next a:hover,
+                  header .navbar-menu .navbar-nav > .open > a, 
+                  header .navbar-menu .navbar-nav > .open > a:focus, 
+                  header .navbar-menu .navbar-nav > .open > a:hover,
+                  .icon-box--description .fa,
+                  .front-blog-date .publish-date,
+                  a.contact-us:hover,
+                  .better-health-info .contact-detail2 li a:hover,.section-4 .section li.left,.portfolioFilter a
+                  {
+                      color: #00AEF0;
+                   }
+                  .widget .tagcloud a:hover,
+    .woocommerce nav.woocommerce-pagination ul li a:focus, 
+    .woocommerce nav.woocommerce-pagination ul li a:hover, 
+    .woocommerce nav.woocommerce-pagination ul li span.current
+                 
+                {
+
+                   border: 1px solid #00AEF0;
+                }
+                .section-14-box .underline,
+   .item blockquote img,
+   .widget .widget-title,
+   .btn-primary,
+   #quote-carousel .carousel-control.left, 
+   #quote-carousel .carousel-control.right,.btn-primary:hover{
+        border-color: #00AEF0;}
+    #secondary .widget-title
+    {
+        border-bottom: 2px solid#00AEF0 ;}
+    .line-heading .line-left, .line-heading .line-right
+    {
+        border-top: 1px dashed#00AEF0 ;}
+    .portfolioFilter a
+    {
+        border: 1px solid#00AEF0 ;}
+    .post blockquote
+    {
+        border-left: 5px solid#00AEF0 ;}
+    
+</style>
+<link rel='stylesheet' id='better-health-responsive-css'  href="{% static 'wp-content/themes/better-health/assets/css/responsive.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'  href="{% static 'wp-content/plugins/elementor/assets/lib/animations/animations.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href="{% static 'wp-content/plugins/elementor/assets/css/frontend.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css'  href="{% static 'wp-content/uploads/elementor/css/global.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-250-css'  href="{% static 'wp-content/uploads/elementor/css/post-250.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.4.1' type='text/css' media='all' />
+<script type='text/javascript' src="{% static 'wp-includes/js/jquery/jquery.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/jquery/jquery-migrate.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/essential-addons-for-elementor-lite/assets/admin/js/admin-bar.js' %}"></script>
+<link rel='https://api.w.org/' href='http://localhost/hospitalmanagement/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="{% static 'xmlrpc.php?rsd' %}" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% static 'wp-includes/wlwmanifest.xml' %}" /> 
+<meta name="generator" content="WordPress 5.4.1" />
+<link rel="canonical" href="{% static 'login/' %}" />
+<link rel='shortlink' href='http://localhost/hospitalmanagement/?p=250' />
+<link rel="alternate" type="application/json+oembed" href="{% static 'wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2Fhospitalmanagement%2Flogin%2F' %}" />
+<link rel="alternate" type="text/xml+oembed" href="{% static 'wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2Fhospitalmanagement%2Flogin%2F&#038;format=xml' %}" />
+	<style type="text/css">
+		.betterdocs-wraper {
+						background-color: #ffffff;		
+																				}
+		.betterdocs-archive-wrap {
+			padding-top: 50px;
+			padding-bottom: 50px;
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.post-type-archive-docs .betterdocs-categories-wrap {
+			width: 100%;
+			max-width: 1600px;
+		}
+		.betterdocs-categories-wrap.layout-masonry .docs-single-cat-wrap {
+			margin-bottom: 15px;
+		}
+		.betterdocs-categories-wrap.layout-flex .docs-single-cat-wrap {
+			margin: 15px; 
+		}
+		.betterdocs-categories-wrap .docs-single-cat-wrap .docs-cat-title-wrap { 
+			padding-top: 20px; 
+		}
+		.betterdocs-categories-wrap .docs-single-cat-wrap .docs-cat-title-wrap,.docs-item-container { 
+			padding-right: 20px;
+			padding-left: 20px;  
+		}
+		.docs-item-container { 
+			padding-bottom: 20px; 
+		}
+		.betterdocs-categories-wrap.betterdocs-category-box .docs-single-cat-wrap,
+		.betterdocs-categories-wrap .docs-single-cat-wrap.docs-cat-list-2-box {
+			padding-top: 20px; 
+			padding-right: 20px;
+			padding-left: 20px; 
+			padding-bottom: 20px; 
+		}
+		.betterdocs-categories-wrap.betterdocs-category-box .docs-single-cat-wrap p{
+						color: #566e8b;
+					}
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-single-cat-wrap,
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-single-cat-wrap .docs-cat-title-wrap {
+						border-top-left-radius: 5px;
+									border-top-right-radius: 5px;
+					}
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-single-cat-wrap,
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-single-cat-wrap .docs-item-container {
+						border-bottom-right-radius: 5px;
+									border-bottom-left-radius: 5px;
+					}
+		.betterdocs-category-list .betterdocs-categories-wrap .docs-single-cat-wrap,
+		.betterdocs-category-box.white-bg .docs-single-cat-wrap,
+		.betterdocs-categories-wrap.white-bg .docs-single-cat-wrap {
+						background-color: #fff;
+					}
+		.betterdocs-category-box.ash-bg .docs-single-cat-wrap {
+						background-color: #f8f8fc;
+					}
+		.betterdocs-category-box .docs-single-cat-wrap:hover,
+		.betterdocs-categories-wrap.white-bg .docs-single-cat-wrap.docs-cat-list-2-box:hover {
+						background-color: #fff;
+					}
+		.betterdocs-category-box .docs-single-cat-wrap img {
+						margin-bottom: 20px;
+					}
+		.betterdocs-category-box .docs-single-cat-wrap .docs-cat-title {
+						margin-bottom: 15px;
+					}
+		.betterdocs-category-box .docs-single-cat-wrap p {
+						margin-bottom: 15px;
+					}
+		.betterdocs-category-box .docs-single-cat-wrap span {
+					}
+		.docs-cat-title > img { 
+			height: 32px; 
+		}
+		.betterdocs-category-box .docs-single-cat-wrap img { 
+			height: 80px; 
+		}
+		.docs-cat-title-inner h3,
+		.betterdocs-category-box .docs-single-cat-wrap .docs-cat-title,
+		.docs-cat-list-2-box .docs-cat-title {
+			font-size: 20px;
+		}
+		.docs-cat-title-inner h3 {
+			color: #528ffe; 
+		}
+		.betterdocs-category-box .docs-single-cat-wrap .docs-cat-title,
+		.docs-cat-list-2 .docs-cat-title {
+			color: #333333;
+		}
+				.docs-cat-title-inner {
+			border-color: #528ffe; 
+		}
+		.docs-cat-title-inner span {
+			color: #ffffff; 
+			font-size: 15px;
+		}
+		.betterdocs-categories-wrap.betterdocs-category-box .docs-single-cat-wrap span,
+		.docs-cat-list-2-box .title-count span {
+			color: #707070; 
+			font-size: 15px;
+		}
+		.docs-item-count {
+			background-color: #528ffe; 
+		}
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-cat-title-inner span {
+			width: 30px; 
+			height: 30px;
+		}
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-item-container {
+			background-color: #ffffff;
+		}
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-item-container li,
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-item-container .docs-sub-cat-title {
+			margin-top: 10px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			margin-left: 10px;
+		}
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-item-container li svg {
+			fill: #566e8b;
+			font-size: 15px;
+		}
+		.betterdocs-archive-wrap .betterdocs-categories-wrap li a {
+			color: #566e8b;
+			font-size: 15px;
+		}
+		.betterdocs-archive-wrap .betterdocs-categories-wrap li a:hover {
+			color: #566e8b;
+		}
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-item-container .docs-sub-cat-title svg {
+			fill: #566e8b;
+			font-size: 15px;
+		}
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-sub-cat-title a {
+			color: #566e8b;
+			font-size: 17px;
+		}
+		.betterdocs-archive-wrap .betterdocs-categories-wrap .docs-sub-cat-title a:hover {
+			color: #566e8b;
+		}
+		.docs-cat-link-btn, .docs-cat-link-btn:visited {
+			background-color: #ffffff;
+			font-size: 16px;
+			color: #528ffe;
+			border-color: #528ffe;
+			border-top-left-radius: 50px;
+			border-top-right-radius: 50px;
+			border-bottom-right-radius: 50px;
+			border-bottom-left-radius: 50px;
+			padding-top: 10px;
+			padding-right: 20px;
+			padding-bottom: 10px;
+			padding-left: 20px;
+		}
+		.docs-cat-link-btn:hover {
+			background-color: #528ffe;
+			color: #fff;
+			border-color: #528ffe;
+		}
+		.betterdocs-single-bg .betterdocs-content-area {
+					}
+		.betterdocs-single-wraper .betterdocs-content-area {
+			padding-top: 30px;
+			padding-right: 25px;
+			padding-bottom: 30px;
+			padding-left: 25px;
+		}
+		.betterdocs-single-wraper .betterdocs-content-area .docs-single-main {
+			padding-top: 20px;
+			padding-right: 20px;
+			padding-bottom: 20px;
+			padding-left: 20px;
+		}
+		.betterdocs-single-layout2 .docs-content-full-main .doc-single-content-wrapper {
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;
+			padding-left: 0px;
+		}
+		.betterdocs-single-layout3 .docs-content-full-main .doc-single-content-wrapper {
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;
+			padding-left: 0px;
+		}
+		.docs-single-title .betterdocs-entry-title {
+			font-size: 36px;
+			color: #3f5876;
+		}
+		.betterdocs-breadcrumb .betterdocs-breadcrumb-item a {
+			font-size: 16px;
+			color: #566e8b;
+		}
+		.betterdocs-breadcrumb .betterdocs-breadcrumb-list .betterdocs-breadcrumb-item a:hover {
+			color: #566e8b;
+		}
+		.betterdocs-breadcrumb .breadcrumb-delimiter {
+			color: #566e8b;
+		}
+		.betterdocs-breadcrumb-item.current span {
+			font-size: 16px;
+			color: #528fff;
+		}
+		.betterdocs-toc {
+			background-color: #fff;
+			padding-top: 20px;
+			padding-right: 25px;
+			padding-bottom: 20px;
+			padding-left: 20px;
+		}
+		.betterdocs-entry-content .betterdocs-toc {
+			margin-bottom: 20px;
+		}
+		.sticky-toc-container {
+			width: 320px;
+		}
+		.sticky-toc-container.toc-sticky {
+			z-index: 2;
+			margin-top: 0px;
+		}
+		.betterdocs-toc > h2.toc-title {
+			color: #3f5876;
+			font-size: 18px;
+		}
+		.betterdocs-entry-content .betterdocs-toc.collapsible-sm .angle-icon {
+			color: #3f5876;
+		}
+		.betterdocs-toc > .toc-list a {
+			color: #566e8b;
+			font-size: 14px;
+			margin-top: 5px;
+			margin-right: 0px;
+			margin-bottom: 5px;
+			margin-left: 0px;
+		}
+		.betterdocs-toc > .toc-list li:before {
+			padding-top: 5px;
+		}
+		.betterdocs-toc > .toc-list a:hover {
+			color: #528fff;
+		}
+		.feedback-form-link .feedback-form-icon svg, .feedback-form-link .feedback-form-icon img {
+			width: 26px;
+		}
+		.betterdocs-toc > .toc-list a.active {
+			color: #528fff;
+		}
+		.betterdocs-toc > .toc-list li {
+			color: #566e8b;
+			font-size: 12px;
+		}
+		.betterdocs-content {
+			color: #4d4d4d;
+			font-size: 16px;
+		}
+		.betterdocs-social-share .betterdocs-social-share-heading h5 {
+			color: #566e8b;
+		}
+		.betterdocs-entry-footer .feedback-form-link {
+			color: #566e8b;
+			font-size: 15px;
+		}
+		.betterdocs-entry-footer .feedback-update-form .feedback-form-link:hover {
+			color: #566e8b;
+		}
+		.docs-navigation a {
+			color: #3f5876;
+			font-size: 16px;
+		}
+		.docs-navigation a:hover {
+			color: #3f5876;
+		}
+		.docs-navigation a svg{
+			fill: #5edf8e;
+			width: 16px;
+		}
+		.betterdocs-entry-footer .update-date{
+			color: #566e8b;
+			font-size: 14px;
+		}
+		.betterdocs-credit p{
+			color: #201d3a;
+			font-size: 14px;
+		}
+		.betterdocs-credit p a{
+			color: #528fff;
+		}
+		.betterdocs-sidebar-content .betterdocs-categories-wrap,
+		.betterdocs-full-sidebar-left {
+			background-color: #ffffff;
+		}
+		.betterdocs-single-layout1 .betterdocs-sidebar-content .betterdocs-categories-wrap {
+						border-top-left-radius: 5px;
+									border-top-right-radius: 5px;
+									border-bottom-right-radius: 5px;
+									border-bottom-left-radius: 5px;
+					}
+		.betterdocs-sidebar-content .docs-single-cat-wrap .docs-cat-title-wrap {
+			background-color: #ffffff;
+		}
+		.betterdocs-sidebar-content .docs-cat-title > img{
+			height: 24px;
+		}
+		.betterdocs-sidebar-content .docs-cat-title-inner h3{
+			color: #3f5876;
+			font-size: 16px;
+		}
+		.betterdocs-sidebar-content .docs-cat-title-inner h3:hover {
+			color: #3f5876 !important;
+		}
+		.betterdocs-sidebar-content .docs-cat-title-inner .cat-list-arrow-down {
+			color: #3f5876;
+		}
+		.betterdocs-sidebar-content .docs-single-cat-wrap .active-title .docs-cat-title-inner h3,
+		.betterdocs-sidebar-content .active-title .docs-cat-title-inner h3,
+		.betterdocs-full-sidebar-left .docs-cat-title-wrap::after {
+			color: #3f5876;
+		}
+		.betterdocs-sidebar-content .docs-item-count{
+			background-color: rgba(82,143,254,0.44);
+		}
+		.betterdocs-sidebar-content .docs-item-count span{
+			color: #ffffff;
+			font-size: 12px;
+		}
+		.betterdocs-sidebar-content .betterdocs-categories-wrap .docs-single-cat-wrap {
+			margin-top: 5px;
+			margin-right: 0px;
+			margin-bottom: 5px;
+			margin-left: 0px;
+		}
+		.betterdocs-sidebar-content .betterdocs-categories-wrap, .betterdocs-full-sidebar-left .betterdocs-categories-wrap {
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;
+			padding-left: 0px;
+		}
+		.betterdocs-sidebar-content .betterdocs-categories-wrap .docs-single-cat-wrap .docs-cat-title-wrap {
+			padding-top: 10px;
+			padding-right: 15px;
+			padding-bottom: 10px;
+			padding-left: 15px;
+		}
+		.betterdocs-single-layout2 .betterdocs-full-sidebar-left .betterdocs-sidebar-content .betterdocs-categories-wrap .docs-cat-title-inner {
+						background-color: #ffffff;		
+						padding-top: 10px;
+			padding-right: 15px;
+			padding-bottom: 10px;
+			padding-left: 15px;
+		}
+		.betterdocs-sidebar-content .docs-item-container{
+			background-color: #ffffff;
+		}
+		.betterdocs-sidebar-content .docs-single-cat-wrap .docs-cat-title-wrap.active-title{
+			background-color: rgba(90, 148, 255, .1);
+			border-color: #528fff;
+		}
+		.betterdocs-sidebar-content .betterdocs-categories-wrap .docs-item-container li {
+			padding-left: 0;
+			margin-top: 10px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			margin-left: 10px;
+		}
+		.betterdocs-single-layout2 .betterdocs-sidebar-content .betterdocs-categories-wrap .docs-item-container li {
+			margin-right: 0 !important;
+		}
+		.betterdocs-sidebar-content .betterdocs-categories-wrap li a {
+			color: #566e8b;
+			font-size: 14px;
+		}
+		.betterdocs-sidebar-content .betterdocs-categories-wrap li a:hover {
+			color: #528fff;
+		}
+		.betterdocs-sidebar-content .betterdocs-categories-wrap li svg {
+			fill: #566e8b;
+			font-size: 14px;
+		}
+		.betterdocs-sidebar-content .betterdocs-categories-wrap li a.active {
+			color: #528fff;
+		}	
+		.betterdocs-category-wraper.betterdocs-single-wraper{
+																				}	
+		.betterdocs-category-wraper.betterdocs-single-wraper .docs-listing-main .docs-category-listing{
+						background-color: #ffffff;
+						margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 30px;
+			padding-right: 30px;
+			padding-bottom: 30px;
+			padding-left: 30px;
+			border-radius: 5px;
+		}
+		.betterdocs-category-wraper .docs-category-listing .docs-cat-title h3 {
+			color: #566e8b;
+			font-size: 20px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-left: 0px;
+		}
+		.betterdocs-category-wraper .docs-category-listing .docs-cat-title p {
+			color: #566e8b;
+			font-size: 14px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-left: 0px;
+		}
+		.docs-category-listing .docs-list ul li {
+			margin-top: 10px;
+			margin-right: 0px;
+			margin-bottom: 10px;
+			margin-left: 0px;
+		}
+		.docs-category-listing .docs-list ul li svg {
+			fill: #566e8b;
+			font-size: 16px;
+		}
+		.docs-category-listing .docs-list ul li a {
+			color: #566e8b;
+			font-size: 14px;
+		}
+		.betterdocs-search-form-wrap{
+						background-color: #f7f7f7;
+																					padding-top: 50px;
+			padding-right: 20px;
+			padding-bottom: 50px;
+			padding-left: 20px;
+		}
+		.betterdocs-search-heading h2 {
+			line-height: 1.2;
+			font-size: 40px;
+			color: #566e8b;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-left: 0px;
+		}
+		.betterdocs-search-heading h3 {
+			line-height: 1.2;
+			font-size: 16px;
+			color: #566e8b;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			margin-left: 0px;
+		}
+		.betterdocs-searchform {
+			background-color: #ffffff;
+			border-radius: 8px;
+			padding-top: 22px;
+			padding-right: 15px;
+			padding-bottom: 22px;
+			padding-left: 15px;
+		}
+		.betterdocs-searchform .betterdocs-search-field{
+			font-size: 18px;
+			color: #595959;
+		}
+		.betterdocs-searchform svg.docs-search-icon {
+			fill: #444b54;
+			height: 30px;
+		}
+		.docs-search-close path.close-line {
+			fill: #ff697b;	
+		}
+		.docs-search-close path.close-border {
+			fill: #444b54;	
+		}
+		.docs-search-loader {
+			stroke: #444b54;	
+		}
+		.betterdocs-searchform svg.docs-search-icon:hover {
+			fill: #444b54;
+		}
+		.betterdocs-live-search .docs-search-result {
+			width: 100%;
+			max-width: 800px;
+			background-color: #fff;
+			border-color: #f1f1f1;
+		}
+		.betterdocs-search-result-wrap::before {
+			border-color: transparent transparent #fff;
+		}
+		.betterdocs-live-search .docs-search-result li {
+			border-color: #f5f5f5;
+		}
+		.betterdocs-live-search .docs-search-result li a {
+			font-size: 16px;
+			color: #444444;
+			padding-top: 10px;
+			padding-right: 10px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+		}
+		.betterdocs-live-search .docs-search-result li:only-child {
+			font-size: 16px;
+			color: #444444;
+		}
+		.betterdocs-live-search .docs-search-result li:hover {
+			background-color: #f5f5f5;
+		}
+		.betterdocs-live-search .docs-search-result li a:hover {
+			color: #444444;
+		}
+		.betterdocs-category-box.pro-layout-3 .docs-single-cat-wrap img,
+		.docs-cat-list-2-box img {
+			margin-right: 20px;
+		}
+		.betterdocs-wraper .betterdocs-search-form-wrap.cat-layout-4 {
+			padding-bottom: 130px;
+		}
+	</style>
+	<script>
+		jQuery(document).ready(function() {
+			var masonryGrid = jQuery(".betterdocs-categories-wrap.layout-masonry");
+			var columnPerGrid = jQuery(".betterdocs-categories-wrap.layout-masonry").attr('data-column');
+			var masonryItem = jQuery(".betterdocs-categories-wrap.layout-masonry .docs-single-cat-wrap");
+			var doc_page_column_space = 15;
+			var total_margin = columnPerGrid * doc_page_column_space;
+			if (masonryGrid.length) {
+				masonryItem.css("width", "calc((100% - "+total_margin+"px) / "+parseInt(columnPerGrid)+")");
+				masonryGrid.masonry({
+					itemSelector: ".docs-single-cat-wrap",
+					percentPosition: true,
+					gutter: doc_page_column_space
+				});
+			}
+		});
+	</script>
+    <style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="page-template-default page page-id-250 logged-in admin-bar no-customize-support right-sidebar elementor-default elementor-kit-238 elementor-page elementor-page-250">
+	<!--[if lte IE 8]>
+		<script type="text/javascript">
+			document.body.className = document.body.className.replace( /(^|\s)(no-)?customize-support(?=\s|$)/, '' ) + ' no-customize-support';
+		</script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+		<script type="text/javascript">
+			(function() {
+				var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\s+)(no-)?'+cs+'(\s+|$)');
+
+						request = true;
+		
+				b[c] = b[c].replace( rcs, ' ' );
+				// The customizer requires postMessage and CORS (if the site is cross domain).
+				b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+			}());
+		</script>
+	<!--<![endif]-->
+                   <header id="header" class="head" role="banner">
+        <nav id="site-navigation" class="main-navigation navbar navbar-default navbar-menu" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="site-branding">
+                                                        <p class="site-title">
+                                    <a href="{% static '' %}" rel="home">Hospital Management</a>
+                                </p>
+                                                                <p class="site-description">Managing hospital with ease</p>
+                                                    </div><!-- .site-branding -->
+
+                </div>
+
+                <div class="better-health-info">
+                    <ul class="contact-detail2">
+                                            <li>
+                            <span class="icon-box--description"><a href="#"><i class="fa fa-home fa-2x"></i> Nellore, Andhra Pradesh</a></span>
+                        </li>
+                         
+                        <li>
+                            <span class="icon-box--description"><a href="tel:+91-123456789"><i class="fa fa-phone fa-2x"></i> +91-123456789</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="icon-box--description"><a href="mailto:hospitalforeveryone@gmail.com"><i class="fa fa-envelope-o fa-2x"></i> hospitalforeveryone@gmail.com</a></span>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav><!-- #site-navigation -->
+    </header><!-- #masthead -->
+    <div id="menu-bar" class="main-menu">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeIn">
+                <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse"><ul id="menu-important-links" class="nav navbar-nav navbar-right"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-270" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-270"><a title="Home" href="http://localhost/hospitalmanagement">Home</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-270" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-270 active"><a title="Home" href="{% url 'home' %}">Home</a></li>
+				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-180" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180"><a title="About Us" target="_blank" href="{% url 'contactUs' %}">About Us</a></li>
+				<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a title="Contact Us" href="{% url 'contactUs' %}">Contact Us</a></li>
+				{% if request.user.is_authenticated %}
+					{% if request.user.is_Patient %}
+						<!--<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a title="Create Appointment For Patient" href="{% static 'edit-profile/' %}">Make an Appointment</a></li>-->
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291"><a title="Your Appointments" href="{% url 'PatientAppointments' request.user.patient.id %}">Appointments</a></li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304"><a title="Previous Medical Treatment" href="{% url 'PatientPreviousTreatments' request.user.patient.id %}">Previous Treatments</a></li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295"><a title="Invoices and Payments" href="{% url 'PatientInvoicesPayments' request.user.patient.id %}">Invoices/Payments</a></li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-338"><a title="Edit Profile" href="{% url 'PatientUpdateProfile' %}">{{ request.user.first_name }} Profile</a></li>
+                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-339"><a title="Logout" href="{% url 'Logout' %}">Logout</a></li>
+
+					{% elif request.user.is_Doctor %}
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291"><a title="Your Appointments" href="{% url 'DoctorAppointments' request.user.doctor.id %}">Appointments</a></li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304"><a title="Previous Medical Treatment" href="{% url 'DoctorPreviousTreatments' request.user.doctor.id %}">Previous Medical Treatments</a></li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304"><a title="Create Prescription" href="{% url 'DoctorCreatePerscription' request.user.doctor.id %}">Create Prescription</a></li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-286"><a title="Update Doctor Profile" href="{% url 'DoctorUpdateProfile' %}">{{ request.user.first_name }} Profile</a></li>
+                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-339"><a title="Logout" href="{% url 'Logout' %}">Logout</a></li>
+
+
+					{% elif request.user.is_Receptionist %}
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-328" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-328"><a title="Receiption Dashboard" href="{% url 'ReceiptionDashboard' %}">Receiption Dashboard</a></li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a title="Create Appointment For Patient" href="{% url 'ReceiptionCreateAppointment' %}">Create Appointment For Patient</a></li>
+                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-339"><a title="Logout" href="{% url 'Logout' %}">Logout</a></li>
+
+
+					{% elif request.user.is_hr %}
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315"><a title="Doctors Status" href="{% url 'HRDashboard' %}">Doctors Status</a></li>
+						<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a title="Accounting" href="{% url 'HRAccounting' %}">Accounting</a></li>
+                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-339"><a title="Logout" href="{% url 'Logout' %}">Logout</a></li>
+					{% endif %}
+				{% else %}
+					<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a title="Register" href="{% url 'registerPatient' %}">Register</a></li>
+					<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-252"><a title="Login" href="{% url 'login' %}">Login</a></li>
+				{% endif %}
+</ul></div>            </div>
+             
+                    <div class="make-booking">
+                            <a data-toggle="modal" href="#appointment" class="btn btn-default makebooking">Make Appointment</a>
+                    </div>
+                 
+                    <!-- Make appointment model -->
+                    <section id="section23" class="appointment">
+                      <div class="modal fade" id="appointment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog style-one" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel">Make an Appoinment</a></h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="appoinment-form-outer">
+                                <div class='fluentform fluentform_wrapper_3'><form data-form_id="3" id="fluentform_3" class="frm-fluent-form fluent_form_3 ff-el-form-top ff_form_instance_3_1 ff-form-loading" data-form_instance="ff_form_instance_3_1" ><input type='hidden' name='__fluent_form_embded_post_id' value='250' /><input type="hidden" id="_fluentform_3_fluentformnonce" name="_fluentform_3_fluentformnonce" value="c0d0d15e93" /><input type="hidden" name="_wp_http_referer" value="/hospitalmanagement/login/" /><div class='ff-el-group'><div class='ff-el-input--label ff-el-is-required asterisk-left'><label for='ff_3_dropdown'>Doctor</label> </div><div class='ff-el-input--content'><select name="dropdown" id="ff_3_dropdown" class="ff-el-form-control" data-name="dropdown" data-calc_value="0" ><option value="">- Select -</option><option value="doctor1"  selected>doctor1</option><option value="doctor2"  >doctor2</option></select></div></div><div class='ff-t-container ff-column-container ff_columns_total_2'><div class='ff-t-cell ff-t-column-1'><div class='ff-el-group'><div class='ff-el-input--label ff-el-is-required asterisk-left'><label for='ff_3_datetime'>Date</label> </div><div class='ff-el-input--content'><input data-type-datepicker data-format='d/m/Y' type="text" name="datetime" id="ff_3_datetime" class="ff-el-form-control ff-el-datepicker" placeholder="Date(dd/mm/yyyy)" data-name="datetime" ></div></div></div><div class='ff-t-cell ff-t-column-2'><div class='ff-el-group'><div class='ff-el-input--label ff-el-is-required asterisk-left'><label for='ff_3_input_text'> Time</label> </div><div class='ff-el-input--content'><input type="text" name="input_text" class="ff-el-form-control" placeholder="Time (HH:MM AM/PM)" data-name="input_text" id="ff_3_input_text" ></div></div></div></div><div class='ff-el-group ff-text-left ff_submit_btn_wrapper'><button type="submit" class="ff-btn ff-btn-submit   ff-btn-md" >Confirm Appointment</button><style>form.fluent_form_3 .ff-btn-submit { background-color: #409EFF; color: #ffffff; }</style></div></form><div id='fluentform_3_errors' class='ff-errors-in-stack ff_form_instance_3_1 ff-form-loading_errors ff_form_instance_3_1_errors'></div></div>        <script type="text/javascript">
+            window.fluent_form_ff_form_instance_3_1 = {"id":"3","settings":{"layout":{"labelPlacement":"top","helpMessagePlacement":"with_label","errorMessagePlacement":"inline"},"restrictions":{"denyEmptySubmission":{"enabled":false}}},"form_instance":"ff_form_instance_3_1","form_id_selector":"fluentform_3","rules":{"dropdown":{"required":{"value":true,"message":"This field is required"}},"datetime":{"required":{"value":true,"message":"This field is required"}},"input_text":{"required":{"value":true,"message":"This field is required"}}}};
+                    </script>
+                                      </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  
+
+        </div>
+    </div>
+
+	
+    <section id="inner-title" class="inner-title" >
+        <div class="container">
+            <div class="row">
+                                
+                  <div class="col-md-7"><h2>Login</h2></div>
+              
+                                    <div class="col-md-5">
+                        <div class="breadcrumbs">
+                            <nav role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb"><h2 class="trail-browse">Browse</h2><ul class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList"><meta name="numberOfItems" content="2" /><meta name="itemListOrder" content="Ascending" /><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="trail-item trail-begin"><a href="http://localhost/hospitalmanagement" rel="home"><span itemprop="name">Home</span></a><meta itemprop="position" content="1" /></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="trail-item trail-end"><span itemprop="name">Login</span><meta itemprop="position" content="2" /></li></ul></nav>                        </div>
+                    </div>
+                            </div>
+        </div>
+    </section>
+    
+    <section id="section16" class="section16">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-9 left-block">
+                    <div id="post-250" class="post-250 page type-page status-publish hentry">
+			 
+
+			<div class="textcont">
+					<div data-elementor-type="wp-page" data-elementor-id="250" class="elementor elementor-250" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-a72d098 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a72d098" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-563d535 elementor-column elementor-col-100 elementor-top-column" data-id="563d535" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a85b2eb elementor-widget elementor-widget-heading" data-id="a85b2eb" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Are you sure to delete the Patient- {{ patient.user.first_name }} {{ patient.user.last_name }}</h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-4671df7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4671df7" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1c77e85 elementor-column elementor-col-100 elementor-top-column" data-id="1c77e85" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b3b7fdd elementor-widget elementor-widget-divider" data-id="b3b7fdd" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-9b5c36c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9b5c36c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-641fc8a elementor-column elementor-col-100 elementor-top-column" data-id="641fc8a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ac1932a eael-fluentform-form-button-custom elementor-widget elementor-widget-eael-fluentform" data-id="ac1932a" data-element_type="widget" data-widget_type="eael-fluentform.default">
+				<div class="elementor-widget-container">
+			        <div class="eael-contact-form eael-fluent-form-wrapper clearfix eael-contact-form-align-default">
+
+            
+            <div class='fluentform fluentform_wrapper_2'>
+			<form data-form_id="2" method="post" action="{% url 'ReceiptionDeleteProfilePatient' patient.user.id %}" id="fluentform_2" class="frm-fluent-form fluent_form_2 ff-el-form-top ff_form_instance_2_2 ff-form-loading">
+			{% csrf_token %}
+						<div class='ff-el-group ff-text-left ff_submit_btn_wrapper'>
+							<input type="submit" class="ff-btn ff-btn-submit   ff-btn-md" name="delete" value="delete" >
+							<button type="button" class="ff-btn ff-btn-submit   ff-btn-md" name="cancel" value="Cancel" ><a href="{% url 'ReceiptionDashboard' %}">Cancel</a></button>
+						<style>form.fluent_form_2 .ff-btn-submit { background-color: #409EFF; color: #ffffff; }</style>
+					</div>
+			</form>
+			
+			<div id='fluentform_2_errors' class='ff-errors-in-stack ff_form_instance_2_2 ff-form-loading_errors ff_form_instance_2_2_errors'></div></div>        <script type="text/javascript">
+            window.fluent_form_ff_form_instance_2_2 = {"id":"2","settings":{"layout":{"labelPlacement":"top","helpMessagePlacement":"with_label","errorMessagePlacement":"inline"},"restrictions":{"denyEmptySubmission":{"enabled":false}}},"form_instance":"ff_form_instance_2_2","form_id_selector":"fluentform_2","rules":{"email":{"required":{"value":true,"message":"This field is required"},"email":{"value":true,"message":"This field must contain a valid email"}},"password":{"required":{"value":true,"message":"This field is required"}}}};
+                    </script>
+                </div>
+
+        		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-5f67932 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5f67932" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-bc3d829 elementor-column elementor-col-100 elementor-top-column" data-id="bc3d829" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-56d6216 elementor-widget elementor-widget-text-editor" data-id="56d6216" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Don&#8217;t Have an Account? <strong><a href="{% static 'home-page/elementor-245/' %}" data-wplink-url-error="true">Register Here</a></strong></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+							<footer class="entry-footer">
+						<span class="edit-link"><a class="post-edit-link" href="{% static 'wp-admin/post.php?post=250&#038;action=edit' %}">Edit <span class="screen-reader-text">"Login"</span></a></span>					</footer><!-- .entry-footer -->
+							</div>
+</div><!-- #post-## -->                </div><!-- div -->
+                                    <div class="col-xs-12 col-sm-12 col-md-3">
+                                            </div>
+                            </div><!-- div -->
+        </div>
+    </section>
+
+    <section id="section-contact-link" class="contact-link">
+      <div class="container">
+        <div class="row">
+          <div class="section-contact-full clearfix">
+              <div class="col-xs-12 col-sm-3 col-md-2 hidden-xs">
+                  <div class="contact-link-img">
+                     <img src="{% static 'wp-content/uploads/2020/05/contact-footer.png' %}" alt="">
+                  </div>
+              </div>
+              <div class="col-xs-12 col-sm-9 col-md-6">
+                  <div class="contact-link-desc">
+                     <h5>Have Any Questions !</h5>
+                     <span>Don’t Hesitate To Contact Us ANy Time.</span>
+                  </div>
+              </div>
+            <div class="col-xs-12 col-sm-9 col-md-4">
+                <div class="contact-link-btn">
+                     <a href="http://demo.canyonthemes.com/better-health/contact-us/" class="contact-us">Contact Us</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   <section id="footer-top" class="footer-top">
+      <div class="container footer-widget-top">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="top-widget-contacts">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 widget">
+                       
+                       <div class="widget-contact-icon pull-left">
+                          <i class="fa  fa-globe" aria-hidden="true"></i>
+                        </div>
+                       
+                        <div class="widget-contact-info">
+                          <p class="top-widget-contacts-title">Visit Us</p>
+                          <p class="top-widget-contacts-content">Location, Province Country</p>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 widget">
+                        <div class="widget-contact-icon pull-left">
+                          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </div>
+                        
+                        <div class="widget-contact-info">
+                          <p class="top-widget-contacts-title">Email</p>
+                          <p class="top-widget-contacts-content">info@canyonthemes.com</p>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 widget">
+                       
+                        <div class="widget-contact-icon pull-left">
+                           <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="widget-contact-info">
+                           <p class="top-widget-contacts-title">Call Us</p>
+                           <p class="top-widget-contacts-content">+01-1234567879</p>
+                        </div>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+                  <div class="container">
+                <div class="row">
+                         
+                                      <div class="col-md-3">
+                                          <div class="footer-top-box wow fadeInUp">
+                                              <section id="search-4" class="widget widget_search"><h4 class="widget-title">Search in Website</h4><div class="search-block">
+    <form action="http://localhost/hospitalmanagement" class="searchform search-form" id="searchform" method="get" role="search">
+        <div>
+            <label for="menu-search" class="screen-reader-text"></label>
+                        <input type="text" placeholder="Search" class="blog-search-field" id="menu-search" name="s" value="">
+            <button class="searchsubmit fa fa-search" type="submit" id="searchsubmit"></button>
+        </div>
+    </form>
+</div></section><section id="pages-3" class="widget widget_pages"><h4 class="widget-title">Pages</h4>		<ul>
+			<li class="page_item page-item-360"><a href="{% static 'accounting/' %}">Accounting</a></li>
+<li class="page_item page-item-65"><a href="{% static 'best-hospital-in-your-town/' %}">Best Hospital in your Town</a></li>
+<li class="page_item page-item-20"><a href="{% static 'blog-page/' %}">Blog Page</a></li>
+<li class="page_item page-item-259"><a href="{% static 'contact-us-2/' %}">Contact Us</a></li>
+<li class="page_item page-item-109"><a href="{% static 'contact-us/' %}">Contact Us</a></li>
+<li class="page_item page-item-279"><a href="{% static 'edit-profile/' %}">Create Appointment For Patient</a></li>
+<li class="page_item page-item-314"><a href="{% static 'doctors-status/' %}">Doctors Status</a></li>
+<li class="page_item page-item-337"><a href="{% static 'edit-profile-3/' %}">Edit Profile</a></li>
+<li class="page_item page-item-40"><a href="{% static 'emergency-services/' %}">Emergency Services</a></li>
+<li class="page_item page-item-47"><a href="{% static 'experienced-doctor/' %}">Experienced Doctor</a></li>
+<li class="page_item page-item-18 page_item_has_children"><a href="{% static '' %}">Home Page</a>
+<ul class='children'>
+	<li class="page_item page-item-245"><a href="{% static 'home-page/elementor-245/' %}">Register</a></li>
+	<li class="page_item page-item-343"><a href="{% static 'home-page/register/' %}">Register as Doctor</a></li>
+</ul>
+</li>
+<li class="page_item page-item-51"><a href="{% static 'inside-city-area/' %}">Inside City Area</a></li>
+<li class="page_item page-item-294"><a href="{% static 'invoices-and-payments/' %}">Invoices and Payments</a></li>
+<li class="page_item page-item-250 current_page_item"><a href="{% static 'login/' %}" aria-current="page">Login</a></li>
+<li class="page_item page-item-43"><a href="{% static 'medical-college/' %}">Medical College</a></li>
+<li class="page_item page-item-303"><a href="{% static 'previous-medical-treatment/' %}">Previous Medical Treatment</a></li>
+<li class="page_item page-item-326"><a href="{% static 'receiption-dashboard/' %}">Receiption Dashboard</a></li>
+<li class="page_item page-item-2"><a href="{% static 'sample-page/' %}">Sample Page</a></li>
+<li class="page_item page-item-226"><a href="{% static 'sample-page-2/' %}">Sample Page</a></li>
+<li class="page_item page-item-284"><a href="{% static 'edit-profile-2/' %}">Update Doctor Profile</a></li>
+<li class="page_item page-item-352"><a href="{% static 'update-doctor-profile-for-hr/' %}">Update Doctor Profile for HR</a></li>
+<li class="page_item page-item-56"><a href="{% static 'welcome-to-canyon-hospital/' %}">Welcome to Canyon Hospital</a></li>
+<li class="page_item page-item-290"><a href="{% static 'your-appointments/' %}">Your Appointments</a></li>
+		</ul>
+			</section>                                          </div>
+                      
+                                      </div>
+                       
+                                      <div class="col-md-3">
+                                          <div class="footer-top-box wow fadeInUp">
+                                              <section id="nav_menu-1" class="widget widget_nav_menu"><h4 class="widget-title">Pages</h4><div class="menu-important-links-container"><ul id="menu-important-links-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-270"><a href="http://localhost/hospitalmanagement">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180"><a target="_blank" rel="noopener noreferrer" href="http://localhost/about">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="{% static 'contact-us-2/' %}">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a href="{% static 'home-page/elementor-245/' %}">Register</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-250 current_page_item menu-item-252"><a href="{% static 'login/' %}" aria-current="page">Login</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="{% static 'edit-profile/' %}">Create Appointment For Patient</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-286"><a href="{% static 'edit-profile-2/' %}">Update Doctor Profile</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291"><a href="{% static 'your-appointments/' %}">Your Appointments</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295"><a href="{% static 'invoices-and-payments/' %}">Invoices and Payments</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304"><a href="{% static 'previous-medical-treatment/' %}">Previous Medical Treatment</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315"><a href="{% static 'doctors-status/' %}">Doctors Status</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-328"><a href="{% static 'receiption-dashboard/' %}">Receiption Dashboard</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-338"><a href="{% static 'edit-profile-3/' %}">Edit Profile</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a href="{% static 'update-doctor-profile-for-hr/' %}">Update Doctor Profile for HR</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a href="{% static 'accounting/' %}">Accounting</a></li>
+</ul></div></section>                                          </div>
+                      
+                                      </div>
+                       
+                                      <div class="col-md-3">
+                                          <div class="footer-top-box wow fadeInUp">
+                                              <section id="text-3" class="widget widget_text"><h4 class="widget-title">Hospital Management</h4>			<div class="textwidget"><p>&nbsp;</p>
+<p>Built in Django, used WordPress for styling. This is a very  beautiful website with power of django and customisations of WordPress.</p>
+</div>
+		</section>                                          </div>
+                      
+                                      </div>
+                       
+                                      <div class="col-md-3">
+                                          <div class="footer-top-box wow fadeInUp">
+                                              <section id="fluentform_widget-3" class="widget widget_fluentform_widget"><h4 class="widget-title">Send us FeedBack</h4><div class='fluentform fluentform_wrapper_11'><form data-form_id="11" id="fluentform_11" class="frm-fluent-form fluent_form_11 ff-el-form-top ff_form_instance_11_3 ff-form-loading" data-form_instance="ff_form_instance_11_3" ><input type='hidden' name='__fluent_form_embded_post_id' value='250' /><input type="hidden" id="_fluentform_11_fluentformnonce" name="_fluentform_11_fluentformnonce" value="c0d0d15e93" /><input type="hidden" name="_wp_http_referer" value="/hospitalmanagement/login/" /><div data-type="name-element" data-name="names" class=" ff-field_container ff-name-field-wrapper" ><div class='ff-t-container'><div class='ff-t-cell'><div class='ff-el-group'><div class='ff-el-input--label asterisk-left'><label for='ff_11_names_first_name_'>First Name</label> </div><div class='ff-el-input--content'><input type="text" name="names[first_name]" id="ff_11_names_first_name_" class="ff-el-form-control" placeholder="First Name" ></div></div></div><div class='ff-t-cell'><div class='ff-el-group'><div class='ff-el-input--label asterisk-left'><label for='ff_11_names_last_name_'>Last Name</label> </div><div class='ff-el-input--content'><input type="text" name="names[last_name]" id="ff_11_names_last_name_" class="ff-el-form-control" placeholder="Last Name" ></div></div></div></div></div><div class='ff-el-group'><div class='ff-el-input--label ff-el-is-required asterisk-left'><label for='ff_11_email'>Email</label> </div><div class='ff-el-input--content'><input type="email" name="email" id="ff_11_email" class="ff-el-form-control" placeholder="Email Address" data-name="email" ></div></div><div class='ff-el-group'><div class='ff-el-input--label asterisk-left'><label for='ff_11_subject'>Subject</label> </div><div class='ff-el-input--content'><input type="text" name="subject" class="ff-el-form-control" placeholder="Subject" data-name="subject" id="ff_11_subject" ></div></div><div class='ff-el-group'><div class='ff-el-input--label ff-el-is-required asterisk-left'><label for='ff_11_message'>Your Message</label> </div><div class='ff-el-input--content'><textarea name="message" id="ff_11_message" class="ff-el-form-control" placeholder="Your Message" rows="4" cols="2" data-name="message" ></textarea></div></div><div class='ff-el-group ff-text-left ff_submit_btn_wrapper'><button type="submit" class="ff-btn ff-btn-submit   ff-btn-md" >Submit Form</button><style>form.fluent_form_11 .ff-btn-submit { background-color: #409EFF; color: #ffffff; }</style></div></form><div id='fluentform_11_errors' class='ff-errors-in-stack ff_form_instance_11_3 ff-form-loading_errors ff_form_instance_11_3_errors'></div></div>        <script type="text/javascript">
+            window.fluent_form_ff_form_instance_11_3 = {"id":"11","settings":{"layout":{"labelPlacement":"top","helpMessagePlacement":"with_label","errorMessagePlacement":"inline","asteriskPlacement":"asterisk-left"},"id":"39","restrictions":{"denyEmptySubmission":{"enabled":false}}},"form_instance":"ff_form_instance_11_3","form_id_selector":"fluentform_11","rules":{"names[first_name]":{"required":{"value":false,"message":"This field is required"}},"names[middle_name]":{"required":{"value":false,"message":"This field is required"}},"names[last_name]":{"required":{"value":false,"message":"This field is required"}},"email":{"required":{"value":true,"message":"This field is required"},"email":{"value":true,"message":"This field must contain a valid email"}},"subject":{"required":{"value":false,"message":"This field is required"}},"message":{"required":{"value":true,"message":"This field is required"}}}};
+                    </script>
+        </section>                                          </div>
+                      
+                                      </div>
+                        
+                </div>
+            </div>
+         
+  </section>
+
+  <section id="footer-bottom" class="footer-bottom">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="copyright">
+                    Copyright &copy; All Rights Reserved. 2020                  </div>
+                  <div class="powered_by">
+                      <span><a href="https://wordpress.org/">Proudly powered by WordPress</a>
+                      </span>
+                      <span class="sep"> | </span>
+                     Theme: BetterHealth by <a href="https://www.canyonthemes.com">CanyonThemes</a>.                  </div>
+              </div>
+          </div>
+      </div>
+</section>
+
+<a href="#" class="scrollup"><i class="fa fa-angle-double-up"></i></a>
+<link rel='stylesheet' id='flatpickr-css'  href="{% static 'wp-content/plugins/elementor/assets/lib/flatpickr/flatpickr.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='fluent-form-styles-css'  href="{% static 'wp-content/plugins/fluentform/public/css/fluent-forms-public.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='fluentform-public-default-css'  href="{% static 'wp-content/plugins/fluentform/public/css/fluentform-public-default.css' %}" type='text/css' media='all' />
+<script type='text/javascript' src="{% static 'wp-includes/js/hoverintent-js.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/admin-bar.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/imagesloaded.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/masonry.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/clipboard.min.js' %}"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var betterdocspublic = {"ajax_url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin-ajax.php","post_id":"250","copy_text":"Copied"};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/betterdocs/public/js/betterdocs-public.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/betterdocs/public/js/simplebar.js' %}"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/localhost\/hospitalmanagement\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/contact-form-7/includes/js/scripts.js' %}"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var localize = {"ajaxurl":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin-ajax.php","nonce":"fe67e4dd9c"};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'wp-content/uploads/essential-addons-elementor/883344a22aa5434e.min.js' %}"></script>
+<script type='text/javascript' defer="defer" src='//cdn.canyonthemes.com/?product=better_health&#038;version=1590252779&#038;ver=5.4.1'></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/better-health/assets/js/bootstrap.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/better-health/assets/js/bootstrap-dropdownhover.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/better-health/assets/js/jquery.isotope.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/better-health/assets/js/jquery.magnific-popup.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/better-health/assets/js/wow.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/better-health/assets/js/owl.carousel.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/better-health/assets/js/waypoints.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/better-health/assets/js/main.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/jquery/ui/core.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/jquery/ui/widget.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/jquery/ui/mouse.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/jquery/ui/draggable.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/underscore.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/backbone.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/elementor/assets/lib/backbone/backbone.marionette.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/elementor/assets/lib/backbone/backbone.radio.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/elementor/assets/js/common-modules.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/jquery/ui/position.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js' %}"></script>
+<script type='text/javascript'>
+var elementorCommonConfig = {"version":"2.9.8","isRTL":false,"isDebug":false,"activeModules":["ajax","finder","connect"],"urls":{"assets":"http:\/\/localhost\/hospitalmanagement\/wp-content\/plugins\/elementor\/assets\/"},"ajax":{"url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin-ajax.php","nonce":"755bf01ae9"},"finder":{"data":{"edit":{"title":"Edit","dynamic":true,"name":"edit"},"general":{"title":"General","dynamic":false,"items":{"saved-templates":{"title":"Saved Templates","icon":"library-save","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/edit.php?post_type=elementor_library&tabs_group=library","keywords":["template","section","page","library"]},"system-info":{"title":"System Info","icon":"info-circle-o","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin.php?page=elementor-system-info","keywords":["system","info","environment","elementor"]},"role-manager":{"title":"Role Manager","icon":"person","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin.php?page=elementor-role-manager","keywords":["role","manager","user","elementor"]},"knowledge-base":{"title":"Knowledge Base","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin.php?page=go_knowledge_base_site","keywords":["help","knowledge","docs","elementor"]}},"name":"general"},"create":{"title":"Create","dynamic":false,"items":{"post":{"title":"Add New Post","icon":"plus-circle-o","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/edit.php?action=elementor_new_post&post_type=post&_wpnonce=313dac2f04","keywords":["post","page","template","new","create"]},"page":{"title":"Add New Page","icon":"plus-circle-o","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/edit.php?action=elementor_new_post&post_type=page&_wpnonce=313dac2f04","keywords":["post","page","template","new","create"]},"elementor_library":{"title":"Add New Template","icon":"plus-circle-o","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/edit.php?post_type=elementor_library#add_new","keywords":["post","page","template","new","create"]}},"name":"create"},"site":{"title":"Site","dynamic":false,"items":{"homepage":{"title":"Homepage","url":"http:\/\/localhost\/hospitalmanagement","icon":"home-heart","keywords":["home","page"]},"wordpress-dashboard":{"title":"Dashboard","icon":"dashboard","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/","keywords":["dashboard","wordpress"]},"wordpress-menus":{"title":"Menus","icon":"wordpress","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/nav-menus.php","keywords":["menu","wordpress"]},"wordpress-themes":{"title":"Themes","icon":"wordpress","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/themes.php","keywords":["themes","wordpress"]},"wordpress-customizer":{"title":"Customizer","icon":"wordpress","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/customize.php","keywords":["customizer","wordpress"]},"wordpress-plugins":{"title":"Plugins","icon":"wordpress","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/plugins.php","keywords":["plugins","wordpress"]},"wordpress-users":{"title":"Users","icon":"wordpress","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/users.php","keywords":["users","profile","wordpress"]}},"name":"site"},"settings":{"title":"Settings","dynamic":false,"items":{"general-settings":{"title":"General Settings","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin.php?page=elementor","keywords":["general","settings","elementor"]},"style":{"title":"Style","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin.php?page=elementor#tab-style","keywords":["style","settings","elementor"]},"advanced":{"title":"Advanced","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin.php?page=elementor#tab-advanced","keywords":["advanced","settings","elementor"]}},"name":"settings"},"tools":{"title":"Tools","dynamic":false,"items":{"tools":{"title":"Tools","icon":"tools","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin.php?page=elementor-tools","keywords":["tools","regenerate css","safe mode","debug bar","sync library","elementor"]},"replace-url":{"title":"Replace URL","icon":"tools","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin.php?page=elementor-tools#tab-replace_url","keywords":["tools","replace url","domain","elementor"]},"version-control":{"title":"Version Control","icon":"time-line","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin.php?page=elementor-tools#tab-versions","keywords":["tools","version","control","rollback","beta","elementor"]},"maintenance-mode":{"title":"Maintenance Mode","icon":"tools","url":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin.php?page=elementor-tools#tab-maintenance_mode","keywords":["tools","maintenance","coming soon","elementor"]}},"name":"tools"}},"i18n":{"finder":"Finder"}},"connect":[]};
+</script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/elementor/assets/js/common.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/wp-embed.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/elementor/assets/lib/flatpickr/flatpickr.min.js' %}"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var fluentFormVars = {"ajaxUrl":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin-ajax.php","forms":[],"step_text":"Step %activeStep% of %totalStep% - %stepTitle%","is_rtl":"","date_i18n":{"previousMonth":"Previous Month","nextMonth":"Next Month","months":{"shorthand":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"longhand":["January","February","March","April","May","June","July","August","September","October","November","December"]},"weekdays":{"longhand":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"shorthand":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]},"daysInMonth":[31,28,31,30,31,30,31,31,30,31,30,31],"rangeSeparator":" to ","weekAbbreviation":"Wk","scrollTitle":"Scroll to increment","toggleTitle":"Click to toggle","amPM":["AM","PM"],"yearAriaLabel":"Year"},"pro_version":"","fluentform_version":"3.5.6","force_init":"","stepAnimationDuration":"350"};
+var fluentFormVars = {"ajaxUrl":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin-ajax.php","forms":[],"step_text":"Step %activeStep% of %totalStep% - %stepTitle%","is_rtl":"","date_i18n":{"previousMonth":"Previous Month","nextMonth":"Next Month","months":{"shorthand":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"longhand":["January","February","March","April","May","June","July","August","September","October","November","December"]},"weekdays":{"longhand":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"shorthand":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]},"daysInMonth":[31,28,31,30,31,30,31,31,30,31,30,31],"rangeSeparator":" to ","weekAbbreviation":"Wk","scrollTitle":"Scroll to increment","toggleTitle":"Click to toggle","amPM":["AM","PM"],"yearAriaLabel":"Year"},"pro_version":"","fluentform_version":"3.5.6","force_init":"","stepAnimationDuration":"350"};
+var fluentFormVars = {"ajaxUrl":"http:\/\/localhost\/hospitalmanagement\/wp-admin\/admin-ajax.php","forms":[],"step_text":"Step %activeStep% of %totalStep% - %stepTitle%","is_rtl":"","date_i18n":{"previousMonth":"Previous Month","nextMonth":"Next Month","months":{"shorthand":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"longhand":["January","February","March","April","May","June","July","August","September","October","November","December"]},"weekdays":{"longhand":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"shorthand":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]},"daysInMonth":[31,28,31,30,31,30,31,31,30,31,30,31],"rangeSeparator":" to ","weekAbbreviation":"Wk","scrollTitle":"Scroll to increment","toggleTitle":"Click to toggle","amPM":["AM","PM"],"yearAriaLabel":"Year"},"pro_version":"","fluentform_version":"3.5.6","force_init":"","stepAnimationDuration":"350"};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/fluentform/public/js/form-submission.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/elementor/assets/js/frontend-modules.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js' %}"></script>
+<script type='text/javascript'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.8","urls":{"assets":"http:\/\/localhost\/hospitalmanagement\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":250,"title":"Login%20%E2%80%93%20Hospital%20Management","excerpt":"","featuredImage":false},"user":{"roles":["administrator"]}};
+</script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/elementor/assets/js/frontend.min.js' %}"></script>
+            <script type="text/javascript">
+                jQuery(document).ready(function ($) {
+                   function initPicker() {
+                       flatpickr.localize(window.fluentFormVars.date_i18n);
+                       var config = {"dateFormat":"d\/m\/Y","enableTime":false,"noCalendar":false,"disableMobile":true,"time_24hr":false};
+                       try {
+                           var customConfig = {};
+                       } catch (e) {
+                           var customConfig = {};
+                       }
+
+                       var config = $.extend({}, config, customConfig);
+                       if (!config.locale) {
+                           config.locale = 'default';
+                       }
+
+                       if(jQuery('#ff_3_datetime').length) {
+                           flatpickr('#ff_3_datetime', config);
+                       }
+                   }
+                    initPicker();
+                    $(document).on('reInitExtras', '.ff_form_instance_3_1', function () {
+                        initPicker();
+                    });
+                });
+            </script>
+            
+</body>
+</html>
+
